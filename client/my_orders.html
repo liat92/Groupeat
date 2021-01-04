@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/font_awesome.css" />
+        <link type="text/css" rel="stylesheet" href="css/general/groupeat_tooltip.css" />
+        <link type="text/css" rel="stylesheet" href="css/ui/my_orders.css" /> 
+	</head>
+	<body>
+        <div class="menu">
+            <div class="groupeatTitle">
+                <h2>Groupeat</h2>
+            </div>
+            <div class="menuIcons">
+                <a class="notifications" title ="התראות" href="notifications.html">
+                    <i class="fas fa-bell navigationIcon" id ="notificationsIcon"></i>
+                    <div class="notificationsAlertDiv"></div>
+                </a>
+                <a title ="הגדרות" href="settings.html">
+                    <i class="fas fa-cog navigationIcon"></i>
+                </a>                  
+            </div>
+        </div>
+        <div class="pageContent">
+            <header>
+                <div class="titleContainer">
+                    <h1> ההזמנה המשרדית שלי</h1>
+                </div>
+            </header>
+            <div class="loading" id="mainLoading">
+                <img src="images/loading.gif"/>
+            </div>
+            <section class="todaysOrders">
+                <table id='myOfficeOrderTable'>
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>מסעדה</th>
+                            <th>הסכום שלי</th>
+                            <th>חסר למינימום</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot class="noOrdersMessage">
+                        <tr>
+                            <td colspan="5">
+                                אין הזמנות משרדיות
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>     
+            </section>
+            <section class="previousOrders">
+                <button id="previousOrdersBtn" data-isOpen ="0">הזמנות קודמות</button> 
+                <div class="loading">
+                    <img src="images/loading.gif"/>
+                </div>
+                <table id="previousOrdersTable" data-step = "1">
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>מסעדה</th>
+                            <th>הסכום שלי</th>
+                            <th>חסר למינימום</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody id="previousOrdersTableTbody">
+                    </tbody>
+                    <tfoot class="noOrdersMessage">
+                        <tr>
+                            <td colspan="5">
+                                לא בוצעו הזמנות קודמות
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+        </div>
+
+        <script src="script/jquery-3.4.0.min.js"></script>
+        <script src="class/General/Helper.js"></script>
+        <script src="class/User.js"></script>
+        <script src="class/Office.js"></script>
+        <script src="class/Restaurant.js"></script>
+        <script src="class/General/ContentModifier.js"></script>
+        <script src="class/General/Request.js"></script>
+        <script src="class/UI/NextDataFetcher.js"></script>
+        <script src="class/UI/UIHelper.js"></script>
+        <script src="script/ui_script/my_orders.js"></script>
+        <script src="script/ui_script/page_change_handler.js"></script>
+    </body>
+</html>

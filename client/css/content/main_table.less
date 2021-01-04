@@ -1,0 +1,116 @@
+.groupeatDiv { 
+    order: 1;
+    text-align: center;
+    font-family: 'Takeaway Sans Hebrew', TakeawaySans, 'Segoe UI', sans-serif;
+
+    .groupeatMainTableTitleDiv {
+        .groupeatTitle {
+            font-size: 16px;
+            float: left;
+            color: rgb(119, 148, 155);
+            font-weight: bold;
+        }
+
+        .mainTitle {
+            float: right;
+        }
+    }
+
+    .groupeatMainTableDiv {
+        direction: ltr;
+
+        #groupeatMainTable { 
+            border-collapse: collapse;
+            width: 100%;
+
+            .fixedHeader {
+                font-size: 16px;
+                display: none;
+
+                tr {
+                    display: block;
+
+                    th {
+                        border-bottom: 1px solid #ddd;
+                        line-height: 20px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        font-size: 15px;
+                        width: 69px;
+                    }
+
+                    th:first-child {
+                        box-sizing: content-box;
+                    }
+
+                    th:last-child {
+                        width: 90px;
+                        padding: 0;
+                    }
+                }
+            }
+
+            .tableContent { 
+                overflow: auto;
+                max-height: 405px;
+                display: grid;
+
+                .groupeatTableLoadingRow {
+                    .loadingImageCell {
+                        text-align: center;
+                        width: 299px;
+
+                        img {
+                            height: 50px;
+                            width: 50px;
+                        }
+                    }
+                }
+
+                .emptyTableRow {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+
+                    .emptyTableCell {
+                        font-size: 16px; 
+                        display: contents;
+                    }
+                }
+
+                .groupeatMainTableRow {
+                    background-color: #ffffff;
+
+                    .orderProp {
+                        border-bottom: 1px solid #ddd;
+                        padding-top: 10px; 
+                        width: 71px; 
+                        direction: rtl;
+
+                        img {
+                            height: 80px; 
+                            width: 80px;
+                        }
+                    }
+
+                    .orderProp:last-child {
+                        padding-top: 12px;
+                        width: 85px;
+                    }
+                }
+
+                .groupeatMainTableRow:hover {
+                    cursor: pointer;
+                    background-color: #4a4a4a45;
+                }
+
+                .groupeatMainTableRow.passedTheMinimum:hover {
+                    background-color: #10d3658f;
+                }
+
+                .groupeatMainTableRow.passedTheMinimum {
+                    background-color: #10d36563;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+If you want to self certify, just execute the files:
+createRootCA and createselfsignedcertificate.
+
+If you want to use a CA provider:
+1. Run the following commands:
+	 sudo apt-get update
+	 sudo apt-get install software-properties-common
+	 sudo add-apt-repository universe
+	 sudo add-apt-repository ppa:certbot/certbot
+	 sudo apt-get update
+	 sudo apt-get install certbot
+2. Run the following command:
+	 certbot certonly --manual
+3. Type your domain name(s) without the protocol part. 
+   For instance: yourdomain.com or even muchdomain.verysite.
+4. Place the file with its content in the path you are requested from certbot (relative to where you start the ssl_server).
+5. Run the following command:
+	 sudo node ssl_server.js
+6. Press enter.
+7. When you need to renew the certificates, just start everything again from stage 2.
+
+Note: If you cannot access the /etc/letsencrypt/live folder, just run the following command:
+      sudo chmod 755 /etc/letsencrypt/live/

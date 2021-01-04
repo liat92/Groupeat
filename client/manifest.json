@@ -1,0 +1,84 @@
+{
+  "name": "Groupeat",
+  "version": "0.1",
+  "description": "",
+	"background": {
+    "scripts": [
+      "script/firebase-app.js",
+      "script/firebase-messaging.js",
+      "class/General/Helper.js",
+      "class/General/Request.js",
+      "class/General/EladsMutationObserver.js",
+      "class/General/ContentModifier.js",
+      "class/Notifications/FCM.js",
+      "class/Notifications/GroupeatNotification.js",
+      "class/User.js",
+      "class/Office.js",
+      "script/background_script/class/BackgroundNotification.js",
+      "script/background_script/background.js",
+      "script/background_script/foregroundNotificationHandler.js",
+      "script/background_script/unreadNotificationsCountHandler.js",
+      "script/background_script/timeToOrderHandler.js"
+    ],
+    "persistent": true
+  },
+  "web_accessible_resources": ["images/loading.gif"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://10bis.co.il/*",
+        "*://www.10bis.co.il/*"
+      ],
+      "js": [
+        "script/firebase-app.js",
+        "script/firebase-messaging.js",
+        "script/jquery-3.4.0.min.js",
+        "class/General/Helper.js",
+        "class/General/Request.js",
+        "class/General/EladsMutationObserver.js",
+        "class/General/ContentModifier.js",
+        "class/Notifications/FCM.js",
+        "class/Office.js",
+        "class/User.js",
+        "script/content_script/main.js",
+        "class/Errors/AlreadyExistsError.js",
+        "class/Errors/PaidOrderExistsError.js",
+        "class/Restaurant.js",
+        "class/Notifications/GroupeatNotification.js",
+        "class/UI/UIHelper.js",
+        "script/content_script/user_office_registration.js",
+        "script/content_script/restaurant/groupeat_restaurants_updater.js",
+        "script/content_script/restaurant/add_update_restaurant_order.js",
+        "script/content_script/main_page/main_table.js"
+      ],
+      "css": [
+        "css/content/main_table.css",
+        "css/content/restaurant.css",
+        "css/general/groupeat_tooltip.css"
+      ]
+    },
+    {
+      "matches": [
+        "*://10bis.co.il/*",
+        "*://www.10bis.co.il/*"
+      ],
+      "js": [
+        "script/content_script/interceptRequests.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "default_title": "Groupeat",
+    "default_popup": "index.html"
+  },
+  "permissions": ["activeTab", "declarativeContent", "storage", "tabs", "webNavigation", "notifications", "background"],
+  "manifest_version": 2,
+  "gcm_sender_id": "103953800507"
+}

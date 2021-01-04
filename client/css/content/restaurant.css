@@ -1,0 +1,54 @@
+.groupeatCannotMakeNewOrder,
+.groupeatAlreadyPassedMinimumText {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
+.groupeatAddOrder,
+.groupeatUpdateOrder {
+  padding-top: 0 !important;
+  margin-top: -14px;
+}
+.groupeatAddOrder .groupeatButtonText,
+.groupeatUpdateOrder .groupeatButtonText {
+  line-height: 1.1;
+}
+.groupeatUpdateOrder .groupeatUpdateOrderButton {
+  background-color: green;
+  border-color: green;
+}
+.groupeatUpdateOrder .groupeatDeleteOrderButton {
+  background-color: red;
+  border-color: red;
+}
+.groupeatUpdateOrder .groupeatDeleteOrderButton,
+.groupeatUpdateOrder .groupeatUpdateOrderButton {
+  margin: 0;
+  padding: 0;
+}
+.groupeatUpdateOrder .groupeatUpdateOrderButton:hover {
+  background-color: green;
+  border-color: green;
+}
+.groupeatUpdateOrder .groupeatDeleteOrderButton:hover {
+  background-color: red;
+  border-color: red;
+}
+.groupeatAddOrder .groupeatAddOrderButton {
+  background-color: green;
+  border-color: green;
+}
+.groupeatAddOrder .groupeatAddOrderButton:hover {
+  background-color: green;
+  border-color: green;
+}
+.groupeatWillPassMinimumNotice {
+  color: red;
+}
+.groupeatLeftAmountNotice,
+.groupeatWillPassMinimumNotice {
+  margin-right: 10%;
+  width: 80%;
+  text-align: center;
+  margin-top: -10px;
+}

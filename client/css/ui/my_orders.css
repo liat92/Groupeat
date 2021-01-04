@@ -1,0 +1,427 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 370px;
+  font-size: 18px;
+  font-family: 'Takeaway Sans Hebrew', TakeawaySans, 'Segoe UI', sans-serif;
+}
+body .menu {
+  background-color: #062029;
+  color: #77949b;
+  width: 100%;
+  height: 30px;
+  top: 0;
+}
+body .menu .groupeatTitle {
+  font-size: 50%;
+  height: 100%;
+  width: 40%;
+  margin: 0 8px;
+  padding: 5px 5px;
+  float: left;
+}
+body .menu .menuIcons {
+  height: 100%;
+  width: 30%;
+  color: inherit;
+  float: right;
+  padding-left: 11%;
+}
+body .menu .menuIcons a {
+  text-decoration: none;
+  color: inherit;
+}
+body .menu .menuIcons .notifications {
+  position: relative;
+}
+body .menu .menuIcons .notifications .notificationsAlertDiv {
+  position: absolute;
+  background-color: #e80c0c;
+  width: 14px;
+  height: 14px;
+  z-index: 1;
+  left: 19px;
+  top: 14px;
+  border: 0.5px solid white;
+  color: white;
+  font-size: 52%;
+  text-align: center;
+  vertical-align: text-top;
+  border-radius: 3px;
+  font-weight: normal;
+  display: none;
+}
+body .menu .menuIcons .notifications .notificationsAlertDiv:hover {
+  background-color: #fb4e4e;
+  transition: background-color 0.2s;
+}
+body .menu .menuIcons .navigationIcon {
+  font-size: 68%;
+  width: 20px;
+  height: auto;
+  color: inherit;
+  margin-left: 3px;
+  padding-left: 10px;
+  transition: font-size 0.2s, color 0.2s;
+}
+body .menu .menuIcons .navigationIcon:hover {
+  cursor: pointer;
+  color: #fff;
+  font-size: 72%;
+}
+body .pageContent header {
+  background-color: #0a3847;
+  color: #fff;
+  width: 100%;
+  height: 40px;
+}
+body .pageContent header .titleContainer {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  line-height: 40px;
+  align-items: center;
+}
+body .pageContent .previousOrders .loading {
+  height: 40px;
+  display: none;
+}
+body .pageContent .previousOrders .loading img {
+  height: 30px;
+  width: 30px;
+}
+body section {
+  width: 100%;
+}
+body h1 {
+  font-size: 90%;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-rendering: optimizeLegibility;
+  word-spacing: 2.5px;
+}
+body table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  direction: rtl;
+  table-layout: auto;
+}
+body table thead {
+  display: table;
+  width: 100%;
+  font-size: 73%;
+  text-align: center;
+  color: #0a3847;
+}
+body table thead tr {
+  height: 35px;
+  width: 100%;
+}
+body table thead tr th:nth-of-type(1),
+body table thead tr th:nth-of-type(5) {
+  width: 8%;
+}
+body table thead tr th:nth-of-type(2) {
+  width: 31%;
+}
+body table thead tr th:nth-of-type(3) {
+  width: 24%;
+  padding-left: 10px;
+}
+body table thead tr th:nth-of-type(4) {
+  width: 28%;
+}
+body table tbody {
+  display: block;
+  width: 100%;
+  max-height: 205px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body table tbody tr {
+  height: 50px;
+  width: 100%;
+}
+body table tbody tr:hover {
+  background-color: #efefef;
+}
+body table tbody tr td:nth-of-type(1),
+body table tbody tr td:nth-of-type(5) {
+  width: 8%;
+}
+body table tbody tr td:nth-of-type(2) {
+  width: 31%;
+}
+body table tbody tr td:nth-of-type(3) {
+  width: 24%;
+  padding-left: 10px;
+}
+body table tbody tr td:nth-of-type(4) {
+  width: 28%;
+}
+body table th,
+body table td {
+  padding: 6px 2px 6px 3px;
+  border-bottom: 1px solid #ddd;
+  font-family: inherit;
+}
+body table td {
+  font-size: 70%;
+  letter-spacing: 0.4px;
+}
+body thead {
+  display: table;
+}
+body #myOfficeOrderTable thead {
+  display: none;
+}
+body #previousOrdersTable thead {
+  display: none;
+}
+body #previousOrdersTable thead tr th:nth-of-type(1) {
+  width: 17%;
+}
+body #previousOrdersTable thead tr th:nth-of-type(2) {
+  width: 20%;
+}
+body #previousOrdersTable thead tr th:nth-of-type(3) {
+  width: 29%;
+  padding-left: 3px;
+}
+body #previousOrdersTable thead tr th:nth-of-type(4) {
+  width: 28%;
+}
+body #previousOrdersTable thead tr th:nth-of-type(5) {
+  width: 7%;
+  padding-left: 30px;
+}
+body #previousOrdersTable tbody tr td:nth-of-type(1) {
+  width: 5%;
+}
+body #previousOrdersTable tbody tr td:nth-of-type(2) {
+  width: 5%;
+}
+body #previousOrdersTable tbody tr td:nth-of-type(3) {
+  width: 28%;
+}
+body #previousOrdersTable tbody tr td:nth-of-type(4) {
+  width: 25%;
+  padding-left: 4%;
+}
+body #previousOrdersTable tbody tr td:nth-of-type(5) {
+  width: 26%;
+  padding-right: 3%;
+}
+body #previousOrdersTable tbody tr td:nth-of-type(6) {
+  width: 9%;
+}
+body #previousOrdersTable .tableContainer {
+  width: 100%;
+}
+body #previousOrdersTable .tableContainer .orderDetailsTable tr td:nth-of-type(1) {
+  width: 14%;
+}
+body #previousOrdersTable .tableContainer .orderDetailsTable tr td:nth-of-type(2) {
+  width: 28%;
+}
+body #previousOrdersTable .tableContainer .orderDetailsTable tr td:nth-of-type(3) {
+  width: 26%;
+  padding-left: 6%;
+}
+body #previousOrdersTable .tableContainer .orderDetailsTable tr td:nth-of-type(4) {
+  width: 26%;
+}
+body #previousOrdersTable .tableContainer .orderDetailsTable tr td:nth-of-type(5) {
+  width: 9%;
+}
+body #previousOrdersTable i {
+  width: 22px;
+  font-size: 15px;
+}
+body #previousOrdersTable .addOrderIcon {
+  font-size: 85%;
+  color: #4893fa;
+  padding-left: 11%;
+  padding-bottom: 20%;
+  transition: font-size 0.15s, color 0.2s;
+}
+body #previousOrdersTable .addOrderIcon:hover {
+  font-size: 95%;
+  color: #1574f5;
+}
+body #previousOrdersTable .addOrderIcon.disabled {
+  color: #939ca8;
+  cursor: not-allowed;
+}
+body #previousOrdersTable .addOrderIcon.disabled:hover {
+  color: #939ca8;
+  cursor: not-allowed;
+}
+body .orderDetailsRow {
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+body .orderDetailsRow .tableContainer {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+body .orderDetailsRow .tableContainer .orderDetailsTable {
+  width: 100%;
+  font-size: 100%;
+  table-layout: inherit;
+}
+body .orderDetailsRow .tableContainer .orderDetailsTable tbody {
+  display: inline-table;
+}
+body .orderDetailsRow .tableContainer .orderDetailsTable tbody .orderDetails {
+  height: 40px;
+  width: 100%;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-size: 92%;
+}
+body i {
+  display: inline-block;
+  width: 30px;
+  padding: 0 5px;
+  color: #93bce2;
+  font-size: 17px;
+}
+body i:hover {
+  color: #7eaed9;
+  cursor: pointer;
+}
+body .loading {
+  text-align: center;
+  width: 100%;
+}
+body #mainLoading img {
+  height: 50px;
+  width: 50px;
+}
+body .paidAndDateDetails {
+  font-weight: 600;
+}
+body .goToRestaurant {
+  border: none;
+}
+body .goToRestaurant button {
+  background-color: #50aadd;
+  color: #fff;
+  padding: 2px 15px;
+  display: inline-block;
+  margin: 0px 30px;
+  height: 20px;
+  width: 80%;
+  font-family: inherit;
+  font-size: 110%;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+body .goToRestaurant button:hover,
+body .goToRestaurant button:active {
+  background-color: #007fc7;
+}
+body #previousOrdersBtn:link,
+body #previousOrdersBtn:visited,
+body #previousOrdersBtn {
+  background-color: #4893fa;
+  color: #fff;
+  letter-spacing: 0.4px;
+  word-spacing: 2.5px;
+  width: 100%;
+  height: 40px;
+  font-size: 85%;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  border-bottom: 1px solid #a5a5a5;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.2s;
+}
+body #previousOrdersBtn:link:hover,
+body #previousOrdersBtn:visited:hover,
+body #previousOrdersBtn:hover {
+  background-color: #1870e8;
+  border: none;
+}
+body #previousOrdersBtn:link .active,
+body #previousOrdersBtn:visited .active,
+body #previousOrdersBtn .active {
+  background-color: #2f7086;
+  border: none;
+}
+body #previousOrdersBtn:link .active:hover,
+body #previousOrdersBtn:visited .active:hover,
+body #previousOrdersBtn .active:hover {
+  background-color: #1870e8;
+  border: none;
+}
+body .orRow {
+  height: 0;
+}
+body .orRow td {
+  line-height: 0%;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+body .orRow td span {
+  background-color: #fff;
+  padding: 0 4px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 90%;
+  color: #81afd9;
+}
+body .noOrdersMessage {
+  display: none;
+}
+body .noOrdersMessage tr td {
+  color: #0a472b;
+  width: 100%;
+  height: 60px;
+  font-size: 70%;
+  text-align: center;
+  direction: rtl;
+}
+body .loadMoreRow td {
+  height: 100%;
+  padding: 0;
+}
+body .loadMoreRow td .loadingButtonDiv {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+body .loadMoreRow td .loadingButtonDiv #loadPreviousOrdersBtn {
+  color: #58aef9;
+  background-color: inherit;
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+body .loadMoreRow td .loadingButtonDiv #loadPreviousOrdersBtn i {
+  font-size: 12px;
+  color: inherit;
+  background-color: inherit;
+}
+body .loadMoreRow td .loadingButtonDiv #loadPreviousOrdersBtn:hover {
+  color: #fff;
+  background-color: #58aef9;
+}

@@ -1,0 +1,182 @@
+body {
+  width: 370px;
+  font-size: 18px;
+  font-family: 'Takeaway Sans Hebrew', TakeawaySans, 'Segoe UI', sans-serif;
+  margin: 0;
+}
+body .notificationsPage header {
+  background-color: #0a3847;
+  color: #fff;
+  width: 100%;
+  height: 40px;
+}
+body .notificationsPage header .titleContainer {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  line-height: 40px;
+  align-items: center;
+}
+body .notificationsPage header .titleContainer .backButton {
+  padding-left: 20px;
+  color: #77949b;
+  font-size: 60%;
+  float: left;
+  margin-right: -100px;
+}
+body .notificationsPage header .titleContainer .backButton span {
+  letter-spacing: 0.4px;
+  word-spacing: 2.5px;
+  margin-left: 4px;
+  font-weight: 600;
+  font-family: 'Takeaway Sans Hebrew', TakeawaySans, 'Segoe UI', sans-serif;
+  font-size: 11px;
+}
+body .notificationsPage header .titleContainer .backButton:hover {
+  cursor: pointer;
+  color: #fff;
+}
+body .notificationsPage .notificationsPageBody {
+  max-height: 294px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+body .notificationsPage .notificationsPageBody .loading {
+  text-align: center;
+}
+body .notificationsPage .notificationsPageBody .loading img {
+  height: 50px;
+  width: 50px;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer {
+  display: none;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer h1 {
+  display: none;
+  font-size: 85%;
+  font-weight: bold;
+  text-align: right;
+  border-bottom: 1px solid #ddd;
+  height: 30px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 7px;
+  background-color: #eaeaea;
+  margin: 0;
+  box-sizing: border-box;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .emptyNotificationsDiv {
+  display: none;
+  font-size: 80%;
+  text-align: center;
+  padding: 20px;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv {
+  width: 100%;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv {
+  cursor: auto;
+  font-size: 12.5px;
+  text-align: right;
+  direction: rtl;
+  border-bottom: 1px solid #ddd;
+  padding-right: 7px;
+  padding-left: 2px;
+  padding-bottom: 10px;
+  background-color: #c8f5ff;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv .notificationTitle .notificationDate {
+  font-size: 11px;
+  direction: rtl;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  float: left;
+  padding-left: 7px;
+  color: #b3b0b0;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv .notificationTitle .notificationName {
+  font-size: 12.5px;
+  direction: rtl;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 7px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv .notificationBody {
+  height: 50px;
+  width: 100%;
+  padding-right: 6px;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv .notificationBody .notificationMessage {
+  height: 100%;
+  width: 85%;
+  display: inline-block;
+  padding: 0;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv .notificationBody .notificationTrashCan {
+  height: 40px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  padding: 0;
+  width: 15%;
+  padding-top: 15px;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv .notificationBody .notificationTrashCan .fas.fa-trash-alt.trash-icon {
+  display: none;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv:hover {
+  background-color: #d4eaff;
+  cursor: pointer;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv:hover .fas.fa-trash-alt.trash-icon {
+  color: #4270e8 !important;
+  display: block !important;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv:hover .fas.fa-trash-alt.trash-icon:hover {
+  color: blue !important;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv:hover .notificationDate {
+  color: grey !important;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv.notificationIsRead {
+  background-color: white;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv.notificationIsRead:hover {
+  background-color: #b3b0b02e;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv.notificationIsRead:hover .fas.fa-trash-alt.trash-icon {
+  color: #93bce2 !important;
+}
+body .notificationsPage .notificationsPageBody .notificationsContainer .notificationsDiv .singleNotificationDiv.notificationIsRead:hover .fas.fa-trash-alt.trash-icon:hover {
+  color: #0046ffe0 !important;
+}
+body .notificationsPage .notificationsPageBody #loadMore #loadMoreNotificationsBtn {
+  height: 30px;
+  width: 100%;
+  color: #58aef9;
+  background-color: #fff;
+  font-size: 12px;
+  border: none;
+  display: none;
+}
+body .notificationsPage .notificationsPageBody #loadMore #loadMoreNotificationsBtn span {
+  font-size: 13.4px;
+  font-weight: 400;
+  font-family: Arial;
+}
+body .notificationsPage .notificationsPageBody #loadMore #loadMoreNotificationsBtn:hover {
+  background-color: #58aef9;
+  color: #fff;
+  cursor: pointer;
+}
+body .notificationsPage .notificationsPageBody #loadMore .loading {
+  height: 40px;
+  width: 100%;
+  display: none;
+}
+body .notificationsPage .notificationsPageBody #loadMore .loading img {
+  height: 30px;
+  width: 30px;
+}

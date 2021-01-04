@@ -1,0 +1,118 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 350px;
+    text-align: right;
+    direction: rtl;
+    font-family: 'Takeaway Sans Hebrew', TakeawaySans, 'Segoe UI',sans-serif;
+    font-size: 18px;
+
+    .header {
+        background-color: rgb(10, 56, 71);
+        color: #fff;
+        width: 100%;
+        height: 40px;
+        align-items: center;
+        
+        .title{
+            width: 70%;
+            height: auto;
+            padding-right: 15%;
+            text-align: center;
+            line-height: 40px; 
+            align-items: center;
+            font-size: 90%;
+            font-weight:600; 
+            letter-spacing: 0.4px;
+            text-rendering: optimizeLegibility;
+            word-spacing: 2.5px;
+            line-height: 40px; 
+            align-items: center;
+            float: right;
+        }
+
+        .backButton {
+            text-decoration: none;
+            color: rgb(119, 148, 155);
+            float: left;
+            transition: font-size 0.2s, color 0.3s;
+
+            .back {
+                font-size: 68%;
+                width: 20px;
+                height: auto;
+                padding-top: 35%;
+                color: inherit;
+                transition: font-size 0.2s;
+            }
+            
+            .back:hover {
+                cursor: pointer;
+            }
+            
+            span {
+                padding-top: 30%;
+                margin-left: 4px;
+                float: right;
+                font-size: 60%;
+                font-weight: 600;
+            }  
+        }
+        
+        .backButton:hover {
+            color: #fff;
+        }
+    }
+
+    .setting {
+        margin-top: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+
+        .settingTitle {
+            font-size: 85%;
+            font-weight: bold;
+        }
+
+        .settingContent {
+            font-size: 85%;
+            margin-top: 10px;
+            margin-right: 0;
+
+            .settingDescription {
+                font-size: 95%;
+                width: 90%;
+            }
+
+            #timeToOrderLabel {
+                cursor: pointer;
+            }
+
+            #timeToOrderSelect {
+                margin-right: 5px;
+            }
+
+            #resetButton {
+                font-size: 80%;
+                margin-top: 15px;
+                padding: 7px;
+                border-radius: 15px;
+                background-color: #f8392b;
+                text-align: center;
+                width: fit-content;
+                color: #ffffff;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            
+            #resetButton:hover {
+                background-color: #cb2d22;
+            }
+            
+            #resetButton:active {
+                transform: translateY(2px);
+            }
+        }
+    }
+}

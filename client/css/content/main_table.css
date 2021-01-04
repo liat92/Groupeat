@@ -1,0 +1,91 @@
+.groupeatDiv {
+  order: 1;
+  text-align: center;
+  font-family: 'Takeaway Sans Hebrew', TakeawaySans, 'Segoe UI', sans-serif;
+}
+.groupeatDiv .groupeatMainTableTitleDiv .groupeatTitle {
+  font-size: 16px;
+  float: left;
+  color: #77949b;
+  font-weight: bold;
+}
+.groupeatDiv .groupeatMainTableTitleDiv .mainTitle {
+  float: right;
+}
+.groupeatDiv .groupeatMainTableDiv {
+  direction: ltr;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .fixedHeader {
+  font-size: 16px;
+  display: none;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .fixedHeader tr {
+  display: block;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .fixedHeader tr th {
+  border-bottom: 1px solid #ddd;
+  line-height: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  width: 69px;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .fixedHeader tr th:first-child {
+  box-sizing: content-box;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .fixedHeader tr th:last-child {
+  width: 90px;
+  padding: 0;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent {
+  overflow: auto;
+  max-height: 405px;
+  display: grid;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent .groupeatTableLoadingRow .loadingImageCell {
+  text-align: center;
+  width: 299px;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent .groupeatTableLoadingRow .loadingImageCell img {
+  height: 50px;
+  width: 50px;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent .emptyTableRow {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent .emptyTableRow .emptyTableCell {
+  font-size: 16px;
+  display: contents;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent .groupeatMainTableRow {
+  background-color: #ffffff;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent .groupeatMainTableRow .orderProp {
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  width: 71px;
+  direction: rtl;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent .groupeatMainTableRow .orderProp img {
+  height: 80px;
+  width: 80px;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent .groupeatMainTableRow .orderProp:last-child {
+  padding-top: 12px;
+  width: 85px;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent .groupeatMainTableRow:hover {
+  cursor: pointer;
+  background-color: #4a4a4a45;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent .groupeatMainTableRow.passedTheMinimum:hover {
+  background-color: #10d3658f;
+}
+.groupeatDiv .groupeatMainTableDiv #groupeatMainTable .tableContent .groupeatMainTableRow.passedTheMinimum {
+  background-color: #10d36563;
+}

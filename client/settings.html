@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/font_awesome.css">
+		<link type="text/css" rel="stylesheet" href="css/ui/settings.css"/>
+	</head>
+	<body>
+		<div class="header">
+            <a href="index.html" class="backButton"><i class="fas fa-chevron-left back"></i><span>חזור</span></a>
+            <span class="title">הגדרות</span>
+        </div>
+
+        <div class="setting timeToOrderSetting">
+            <div class="settingTitle timeToOrderSettingTitle">
+                התראות
+            </div>
+
+            <div class="settingContent timeToOrderAlertContent">
+                <input type="checkbox" id="timeToOrderCheckbox" />
+                <label id="timeToOrderLabel" for="timeToOrderCheckbox">התראת זמן להזמין</label>
+                <select id="timeToOrderSelect" disabled="true"></select>
+            </div>
+        </div>
+
+        <div class="setting resetSettings">
+            <div class="settingTitle resetSettingsTitle">
+                איפוס
+            </div>
+
+            <div class="settingContent resetSettingsContent">
+                <div class="settingDescription">
+                    בעת לחיצה על כפתור זה תמחק היסטוריית ההזמנות, התראות, עוגיות, מטמון והגדרות.
+                </div>
+
+                <div id="resetButton">
+                    אפס את התוסף
+                </div>
+            </div>
+        </div>
+        
+        <script src="script/jquery-3.4.0.min.js"></script>
+		<script src="class/General/Helper.js"></script>
+		<script src="class/User.js"></script>
+		<script src="class/Office.js"></script>
+        <script src="class/General/ContentModifier.js"></script>
+        <script src="class/General/Request.js"></script>
+		<script src="class/UI/NextDataFetcher.js"></script>
+		<script src="script/ui_script/settings.js"></script>
+		<script src="script/ui_script/page_change_handler.js"></script>
+	</body>
+</html>

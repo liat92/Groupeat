@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/font_awesome.css">
+        <link type="text/css" rel="stylesheet" href="css/ui/notifications.css">
+	</head>
+	<body>
+        <div class="notificationsPage">
+            <header>
+                <div class="titleContainer">
+                    <a href="index.html" class="backButton"><i class="fas fa-chevron-left back"><span>חזור</span></i></a> 
+                    <span>התראות</span>
+                </div>
+            </header>
+            <div class="notificationsPageBody">
+                <div class="loading" id="mainLoading">
+                    <img src="images/loading.gif"/>
+                </div>
+                <div class="notificationsContainer" id="todaysNotifications">
+                    <h1>התראות יומיות</h1>
+                    <div class="notificationsDiv"></div>
+                    <div class="emptyNotificationsDiv">אין התראות יומיות</div>
+                </div>
+                <div class="notificationsContainer" id="previousNotifications">
+                    <h1>התראות קודמות</h1>
+                    <div class="notificationsDiv"></div>
+                    <div class="emptyNotificationsDiv">אין התראות קודמות</div>
+                </div>
+                <div id="loadMore">
+                    <button id="loadMoreNotificationsBtn" data-step="1">
+                        <i class="fas fa-chevron-circle-down"><span> טען התראות נוספות</span></i>
+                    </button>
+                    <div class="loading">
+                        <img src="images/loading.gif"/> 
+                    </div>   
+                </div>
+            </div>
+        </div>
+        
+        <script src="script/jquery-3.4.0.min.js"></script>
+        <script src="class/General/Helper.js"></script>
+        <script src="class/User.js"></script>
+        <script src="class/Office.js"></script>
+        <script src="class/Restaurant.js"></script>
+        <script src="class/General/ContentModifier.js"></script>
+        <script src="class/General/Request.js"></script>
+        <script src="class/UI/NextDataFetcher.js"></script>
+        <script src="script/ui_script/notifications.js"></script>
+        <script src="script/ui_script/page_change_handler.js"></script>
+        <script src="class/Notifications/GroupeatNotification.js"></script>
+    </body>
+</html>

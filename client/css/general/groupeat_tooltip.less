@@ -1,0 +1,69 @@
+.groupeatTooltip,.groupeatTooltipSmall {
+    position: relative;
+}
+
+.groupeatTooltip {
+    .groupeatTooltipText {
+        visibility: hidden;
+        width: 200px;
+        background-color: #000000;
+        color: #ffffff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 110%;
+        left: 50%;
+        margin-left: -100px;
+        
+        /* Fade in tooltip - takes 0.5 second to go from 0% to 100% opac: */
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .groupeatTooltipText::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+      }
+}
+
+.groupeatTooltip:hover,.groupeatTooltipSmall:hover {
+    .groupeatTooltipText {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.groupeatTooltipSmall:hover {
+    .groupeatTooltipText {
+        transition-delay: 0.5s;
+    }
+}
+
+.groupeatTooltipSmall {
+    .groupeatTooltipText {
+        visibility: hidden;
+        font-size: 65%;
+        background-color: #ffffff;
+        color: rgb(41, 41, 41);
+        text-align: center;
+        position: absolute;
+        z-index: 1;
+        top: 120%;
+        left: 120%;
+        margin-left: -50px;
+        padding: 2px 7px;
+        font-family: 'Takeaway Sans Hebrew', TakeawaySans,'Segoe UI',sans-serif !important;
+        
+        /* Fade in tooltip - takes 0.3 second to go from 0% to 100% opac: */
+        opacity: 0;
+        transition: opacity 0.3s ease 0s;
+    }
+}

@@ -1,0 +1,220 @@
+body {
+    width: 370px;
+    font-size: 18px;
+    font-family: 'Takeaway Sans Hebrew', TakeawaySans, 'Segoe UI', sans-serif;
+    margin: 0;
+
+    .notificationsPage {
+        header {
+            background-color: rgb(10, 56, 71);
+            color: #fff;
+            width: 100%;
+            height: 40px;
+
+            .titleContainer{
+                width: 100%;
+                height: auto;
+                text-align: center;
+                line-height: 40px; 
+                align-items: center;
+
+                .backButton {
+                    padding-left: 20px;
+                    color: rgb(119, 148, 155);
+                    font-size: 60%;
+                    float: left;
+                    margin-right: -100px;
+            
+                    span {
+                        letter-spacing: 0.4px;
+                        word-spacing: 2.5px;    
+                        margin-left: 4px;
+                        font-weight: 600;
+                        font-family: 'Takeaway Sans Hebrew', TakeawaySans, 'Segoe UI', sans-serif;
+                        font-size: 11px;
+                    }
+                 }
+            
+                .backButton:hover {
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+        }
+        
+        .notificationsPageBody {
+            max-height: 294px;
+            overflow: scroll;
+            overflow-x: hidden;
+
+            .loading {
+                text-align: center;
+                
+                img {
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+
+            .notificationsContainer {
+                display: none;
+
+                h1 {
+                    display: none;
+                    font-size: 85%;
+                    font-weight: bold;
+                    text-align: right;
+                    border-bottom: 1px solid #ddd;
+                    height: 30px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    padding-right: 7px;
+                    background-color: #eaeaea;
+                    margin: 0;
+                    box-sizing: border-box;
+                }
+                
+                .emptyNotificationsDiv {
+                    display: none;
+                    font-size: 80%; 
+                    text-align: center; 
+                    padding: 20px;
+                }
+        
+                .notificationsDiv {
+                    width: 100%;
+        
+                    .singleNotificationDiv {
+                        cursor: auto;
+                        font-size: 12.5px;
+                        text-align: right;
+                        direction: rtl;
+                        border-bottom: 1px solid #ddd;
+                        padding-right: 7px;
+                        padding-left: 2px;
+                        padding-bottom: 10px;
+                        background-color: #c8f5ff;
+        
+                        .notificationTitle {
+                            .notificationDate {
+                                font-size: 11px;
+                                direction: rtl;
+                                padding-top: 5px;
+                                padding-bottom: 5px;
+                                float: left;
+                                padding-left: 7px;
+                                color:  rgb(179, 176, 176);
+                            }
+        
+                            .notificationName {
+                                font-size: 12.5px;
+                                direction: rtl;
+                                padding-top: 5px;
+                                padding-bottom: 5px;
+                                padding-right: 7px;
+                                text-decoration: underline;
+                                font-weight: bold;
+                            }
+                        }
+        
+                        .notificationBody {
+                            height: 50px; 
+                            width: 100%;
+                            padding-right: 6px;
+        
+                            .notificationMessage {
+                                height: 100%; 
+                                width: 85%; 
+                                display: inline-block;
+                                padding: 0;
+                            }
+        
+                            .notificationTrashCan {
+                                height: 40px;
+                                display: inline-block;
+                                vertical-align: top;
+                                text-align: center;
+                                padding: 0;
+                                width: 15%;
+                                padding-top: 15px;
+        
+                                .fas.fa-trash-alt.trash-icon {
+                                    display: none;
+                                }                              
+                            }        
+                        }
+                    }
+
+                    .singleNotificationDiv:hover {
+                        background-color: #d4eaff;
+                        cursor: pointer;
+
+                        .fas.fa-trash-alt.trash-icon {
+                            color: #4270e8 !important;
+                            display: block !important;
+                        }
+
+                        .fas.fa-trash-alt.trash-icon:hover {
+                            color: blue !important;
+                        }
+
+                        .notificationDate {
+                            color: grey !important;
+                        }
+                    }
+
+                    .singleNotificationDiv.notificationIsRead {
+                        background-color: white;
+                    }
+
+                    .singleNotificationDiv.notificationIsRead:hover {
+                        background-color: #b3b0b02e;
+
+                        .fas.fa-trash-alt.trash-icon {
+                            color: rgb(147, 188, 226) !important;
+                        }
+
+                        .fas.fa-trash-alt.trash-icon:hover {
+                            color: #0046ffe0 !important;
+                        }
+                    }
+                }
+            }
+
+            #loadMore {                                
+                #loadMoreNotificationsBtn {
+                    height: 30px;
+                    width: 100%;
+                    color: #58aef9;
+                    background-color: #fff;
+                    font-size: 12px;
+                    border: none;
+                    display: none;
+
+                    span {
+                        font-size: 13.4px;
+                        font-weight: 400;
+                        font-family: Arial;
+                    }
+                }
+                
+                #loadMoreNotificationsBtn:hover {
+                    background-color: #58aef9;
+                    color: #fff;
+                    cursor: pointer;
+                }
+
+                .loading {
+                    height: 40px;
+                    width: 100%;
+                    display: none;
+
+                    img {
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+        } 
+    }
+}

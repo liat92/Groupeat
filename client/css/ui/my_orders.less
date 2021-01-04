@@ -1,0 +1,488 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+	width: 370px;
+	font-size: 18px;
+	font-family: 'Takeaway Sans Hebrew', TakeawaySans,'Segoe UI',sans-serif;
+
+	.menu{
+		background-color: rgb(6, 32, 41);
+		color: rgb(119, 148, 155);
+		width: 100%;
+		height: 30px;
+		top: 0;
+		
+		.groupeatTitle {
+			font-size: 50%;
+			height: 100%;
+			width: 40%;
+			margin: 0 8px;
+			padding: 5px 5px;
+			float: left;
+		}
+		
+		.menuIcons{
+			height: 100%;
+			width: 30%;
+			color: inherit;
+			float: right;
+			padding-left: 11%;
+							
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+			
+			.notifications {
+				position: relative;
+				
+				.notificationsAlertDiv {
+					position: absolute;
+					background-color: #e80c0c;
+					width: 14px;
+					height: 14px;
+					z-index: 1;
+					left: 19px;
+					top: 14px;
+					border: 0.5px solid white;
+					color: white;
+					font-weight: normal;
+					font-size: 52%;
+					text-align: center;
+					vertical-align: text-top;
+					border-radius: 3px;
+					font-weight: normal;
+					display: none;
+					
+					&:hover {
+						background-color: #fb4e4e;
+						transition: background-color 0.2s;
+					}
+				}
+			}
+
+			.navigationIcon {
+				font-size: 68%;
+				width: 20px;
+				height: auto;
+				color: inherit;
+				margin-left: 3px;
+				padding-left: 10px;
+				transition: font-size 0.2s, color 0.2s;
+				
+				&:hover {
+					cursor: pointer;
+					color: #fff;
+					font-size: 72%;
+				}
+			}
+		}
+		
+	}
+
+	.pageContent {
+		header {
+			background-color: rgb(10, 56, 71);
+			color: #fff;
+			width: 100%;
+			height: 40px;
+			
+			.titleContainer {
+				width: 100%;
+				height: auto;
+				text-align: center;
+				line-height: 40px; 
+				align-items: center;
+			}
+		}
+		
+		.previousOrders .loading {
+			height: 40px;
+			display: none;
+			
+			img {
+				height: 30px;
+				width: 30px;
+			}
+		}
+	}	
+	
+	section {
+		width: 100%;
+	}
+	
+	h1 {
+		font-size: 90%;
+		font-weight:600; 
+		letter-spacing: 0.4px;
+		text-rendering: optimizeLegibility;
+		word-spacing: 2.5px;
+	}
+	
+	table {
+		display: table;
+		width: 100%;
+		border-collapse: collapse;
+		text-align: center; 
+		direction: rtl;
+		table-layout:auto; 
+		
+		thead {
+			display: table;
+			width: 100%;
+			font-size: 73%;
+			text-align: center;
+			color: rgb(10, 56, 71);
+			
+			tr {
+				height: 35px;
+				width: 100%;
+				
+				th {
+					&:nth-of-type(1), &:nth-of-type(5) {
+						width: 8%;
+					}
+					
+					&:nth-of-type(2) {
+						width: 31%;
+					}
+					
+					&:nth-of-type(3) {
+						width: 24%;
+						padding-left: 10px;
+					}
+					
+					&:nth-of-type(4) {
+						width: 28%;
+					}
+				}
+			}
+		}
+		
+		tbody {
+			display: block;
+			width: 100%;
+			max-height: 205px;
+			overflow-x: hidden;
+			overflow-y: auto;
+			
+			tr {
+				height: 50px;
+				width: 100%;
+				
+				&:hover {
+					background-color:#efefef;
+				}
+				
+				td {
+					
+					&:nth-of-type(1), &:nth-of-type(5) {
+						width: 8%;
+					}
+					
+					&:nth-of-type(2) {
+						width: 31%;
+					}
+					
+					&:nth-of-type(3) {
+						width: 24%;
+						padding-left: 10px;
+					}
+					
+					&:nth-of-type(4) {
+						width: 28%;
+					}
+	
+				}
+			}
+		}
+		
+		th, td {
+			padding: 6px 2px 6px 3px; 
+			border-bottom: 1px solid #ddd;
+			font-family: inherit;
+		}
+	
+		td {
+			font-size: 70%;
+			letter-spacing: 0.4px;
+		}
+	}
+
+	thead {
+		display: table;
+	}
+	
+	#myOfficeOrderTable {
+		thead {
+			display: none;
+		}
+	}
+	
+	#previousOrdersTable {
+		thead {
+			display: none;
+			
+			tr {
+				th {
+					&:nth-of-type(1) {width: 17%;}
+					&:nth-of-type(2) {width: 20%;}
+					&:nth-of-type(3) {width: 29%; padding-left: 3px;}
+					&:nth-of-type(4) {width: 28%;}
+					&:nth-of-type(5) {width: 7%; padding-left: 30px;}
+				}
+			}
+		}
+		
+		tbody {
+			
+			tr {
+				td {
+					&:nth-of-type(1) {width: 5%;}
+					&:nth-of-type(2) {width: 5%;}
+					&:nth-of-type(3) {width: 28%;}
+					&:nth-of-type(4) {width: 25%; padding-left: 4%;}
+					&:nth-of-type(5) {width: 26%; padding-right: 3%;}
+					&:nth-of-type(6) {width: 9%;}
+				}
+			}
+		}
+		
+		.tableContainer {
+			width: 100%;
+			
+			.orderDetailsTable {
+				tr {
+					td {
+						&:nth-of-type(1) {width: 14%;}
+						&:nth-of-type(2) {width: 28%;}
+						&:nth-of-type(3) {width: 26%; padding-left: 6%;}
+						&:nth-of-type(4) {width: 26%;}
+						&:nth-of-type(5) {width: 9%;}
+					}
+				}
+			}
+		}
+		
+		i {
+			width: 22px;
+			font-size: 15px;
+		}
+		
+		.addOrderIcon {
+			font-size: 85%;
+			color: rgb(72, 147, 250);
+			padding-left: 11%;
+			padding-bottom: 20%;
+			transition: font-size 0.15s, color 0.2s;
+			
+			&:hover {
+				font-size: 95%;
+				color: rgb(21, 116, 245);
+			}
+		}
+	
+		.addOrderIcon.disabled {
+			color: rgb(147, 156, 168);
+			cursor: not-allowed;
+			
+			&:hover {
+				color: rgb(147, 156, 168);
+				cursor: not-allowed;
+			}
+		}
+	
+	}
+	
+	
+	.orderDetailsRow {
+		width: 100%;
+		height: auto;
+		padding: 0;
+	
+		.tableContainer{
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			font-size: inherit;
+			
+			.orderDetailsTable{
+				width: 100%;
+				font-size: 100%;
+				table-layout:inherit;
+				
+				tbody{
+					display: inline-table;
+					
+					.orderDetails {
+						height: 40px;
+						width: 100%;
+						padding: 0;
+						background-color:#f5f5f5;
+						font-size: 92%;
+					}
+				}
+			}
+		}
+	}
+	
+	i {
+		display: inline-block;
+		width: 30px; 
+		padding: 0 5px;
+		color: rgb(147,188,226);
+		font-size: 17px;
+		
+		&:hover {
+			color: rgb(126, 174, 217);
+			cursor: pointer;
+		}
+	}
+	
+	.loading {
+		text-align: center;
+		width: 100%;
+	}
+		
+	#mainLoading img {
+			height: 50px;
+			width: 50px;
+	}
+	
+	.paidAndDateDetails {
+		font-weight: 600;
+	}
+	
+	.goToRestaurant {
+		border: none;  
+		
+		button {
+			background-color: rgb(80, 170, 221);
+			color: #fff;
+			padding: 2px 15px;
+			display: inline-block;
+			margin: 0px 30px;
+			height: 20px;
+			width: 80%;
+			font-family: inherit;
+			font-size: 110%;
+			font-weight: 600;
+			letter-spacing: 1px;
+			border: none;
+			border-radius: 15px;
+			cursor: pointer;
+			transition: background-color 0.2s;
+			
+			&:hover,&:active {
+				background-color: rgb(0, 127, 199);
+			}
+		}	
+	}
+	
+	
+	#previousOrdersBtn:link,
+	#previousOrdersBtn:visited,
+	#previousOrdersBtn{
+		background-color: rgb(72, 147, 250);
+		color: #fff;
+		letter-spacing: 0.4px;
+		word-spacing: 2.5px;
+		width: 100%;
+		height: 40px;
+		font-size: 85%;
+		font-weight: 600;
+		font-family: inherit;
+		border: none;
+		border-bottom: 1px solid #a5a5a5;
+		cursor: pointer;
+		transition: background-color 0.5s, color 0.2s;
+		
+		&:hover {
+			background-color: rgb(24, 112, 232);
+			border: none;
+		}
+		
+		.active {
+			background-color: rgb(47, 112, 134);
+			border: none;
+			
+			&:hover {
+				background-color: rgb(24, 112, 232);
+				border: none;
+			}
+		}
+	}
+	
+	.orRow {
+		height: 0;
+		
+		 td {
+			line-height: 0%;
+			padding: 0;
+			position: relative;
+			z-index: 1;
+			
+			span {
+				background-color: #fff;
+				padding: 0 4px;
+				border-radius: 50%;
+				font-weight: 700;
+				font-size: 90%;
+				color: #81afd9;
+			}
+		}
+	}
+	
+	.noOrdersMessage {
+		display: none;
+		tr {
+			td {
+				color: rgb(10, 71, 43);
+				width: 100%;
+				height: 60px;
+				font-size: 70%;
+				text-align: center;
+				direction: rtl;
+			}
+		}
+	}
+	
+	.loadMoreRow {
+		td {
+			height: 100%;
+			padding: 0;
+			
+			 .loadingButtonDiv {
+				height: 100%;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				
+				#loadPreviousOrdersBtn {
+					color: #58aef9;
+					background-color: inherit;
+					display: inline-block;
+					width: 100%;
+					height: 30px;
+					border: none;
+					cursor: pointer;
+					
+					i {
+						font-size: 12px;
+						color: inherit;
+						background-color: inherit;
+					}
+					
+					&:hover {
+						color: #fff;
+						background-color: #58aef9;
+					}
+				}
+			}
+		}
+	}
+}
